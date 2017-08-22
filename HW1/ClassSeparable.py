@@ -8,9 +8,9 @@ mean = [1, 1]
 std = [[0.05,0], [0,0.05]]
 
 def linearclassifier(X, Y):
-	tri = np.array([1.0 for i in range(X.shape[0])])
-	tri = np.reshape(tri, (tri.shape[0],1 ))
-	X = np.concatenate([tri , X], axis = 1)
+	t_ri = np.array([1.0 for i in range(X.shape[0])])
+	t_ri = np.reshape(t_ri, (t_ri.shape[0],1 ))
+	X = np.concatenate([t_ri , X], axis = 1)
 	Xpseudo = np.matmul(np.linalg.inv(np.matmul(X.T, X)),X.T)
 	W = np.matmul(Xpseudo, labels)
 
